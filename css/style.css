@@ -55,6 +55,10 @@ picture:not(picture.hero_img):before {
 	background-color: rgba(0,0,0,0.3);
 }
 
+.link:hover, .red:hover {border-bottom: 2px solid;box-sizing: border-box;}
+.link, .red{border-bottom: 2px solid transparent;}
+
+   
 /* Header */
 header {
     padding: 40px 24px;
@@ -133,7 +137,16 @@ ul {list-style: none;padding: 0;}
     max-width: 125px;
 }
 
-
+.box picture:hover:before {
+	content:'';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(255 255 255 / 48%);
+}
+.box:hover .box_title{color:black}
 
 .seeAll_btn {
     font-weight: 400;
@@ -152,6 +165,8 @@ ul {list-style: none;padding: 0;}
 
 .seeAll_btn:hover {
     cursor: pointer;
+    background: var(--primary-color2);
+    color: var(--primary-color);
 }
 
 /* Footer */
@@ -265,8 +280,8 @@ footer .footer_links {grid-area: M;font-weight: 400;font-size: 15px;line-height:
     }
     
     .box_title {
-        left: 40px;
-        font-size: 32px;
+        left: 5%;
+        font-size: 2vw;
         line-height: 32px;
         max-width: 150px;
     }
@@ -312,7 +327,6 @@ footer .footer_links {grid-area: M;font-weight: 400;font-size: 15px;line-height:
 
 /* XL */
 @media (min-width: 1700px) {
-    header, .header_img {
-        height: 950px;
-    }
+    header, .header_img {height: 950px;}
+    .box_title{max-width: unset;}
 }
