@@ -249,6 +249,7 @@ footer .footer_links {grid-area: M;font-weight: 400;font-size: 15px;line-height:
     grid-template-areas:
     "T S"
     "B B";
+    margin: 120px 0;
     }
     
     .creations .subtitle {text-align: unset;}
@@ -299,12 +300,19 @@ footer .footer_links {grid-area: M;font-weight: 400;font-size: 15px;line-height:
             .hero_img img {max-width: 70%;}
             .hero_text {
                 background: var(--primary-color);
-                padding: 5em;
-                position: relative;
-                top: -330px;
-                right: -51%;
+                padding: 4em;
+                position: absolute;
+                top: 45%;
+                right: 0;
                 max-width: 40%;
             }
             
             .hero_text h2, .hero_text p {text-align: left;}
+}
+
+/* XL */
+@media (min-width: 1700px) {
+    header, .header_img {
+        height: 950px;
+    }
 }
